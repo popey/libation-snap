@@ -1,0 +1,29 @@
+version: 11.3.6
+name: libation
+base: core22
+summary: Liberate your audio books
+description: |
+  Libation is a free, open source audible library manager. 
+  Decrypt, backup, organize, and search your audible library
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+
+grade: stable
+confinement: strict
+
+parts:
+  libation:
+    source: https://github.com/rmcrackan/Libation/releases/download/v$SNAPCRAFT_PROJECT_VERSION/Libation.$SNAPCRAFT_PROJECT_VERSION-linux-chardonnay-$SNAPCRAFT_TARGET_ARCH.deb
+    plugin: dump
+
+apps:
+  libation:
+    command: usr/lib/libation/Libation
+    extensions: [gnome]
+    environment:
+      HOME: "$SNAP_USER_COMMON"
+    plugs:
+      - network
+      - home
+      - removable-media

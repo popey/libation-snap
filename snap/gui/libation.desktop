@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Libation
+Exec=libation
+Icon=${SNAP}/meta/gui/libation.svg
+Comment=Liberate your Audiobooks
+Terminal=false
+Type=Application
+MimeType=x-content/unix-software;
