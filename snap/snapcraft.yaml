@@ -1,4 +1,4 @@
-version: 11.3.7
+version: "11.3.7"
 name: libation
 base: core22
 summary: Liberate your audio books
@@ -14,8 +14,13 @@ confinement: strict
 
 parts:
   libation:
-    source: https://github.com/rmcrackan/Libation/releases/download/v$CRAFT_PROJECT_VERSION/Libation.$CRAFT_PROJECT_VERSION-linux-chardonnay-$CRAFT_TARGET_ARCH.deb
+    source: https://github.com/rmcrackan/Libation/releases/download/v$SNAPCRAFT_PROJECT_VERSION/Libation.$SNAPCRAFT_PROJECT_VERSION-linux-chardonnay-$CRAFT_ARCH_TRIPLET_BUILD_FOR.deb
     plugin: dump
+    override-pull: |
+      echo $CRAFT_PROJECT_VERSION
+      echo $CRAFT_ARCH_TRIPLET_BUILD_FOR
+      echo https://github.com/rmcrackan/Libation/releases/download/v$CRAFT_PROJECT_VERSION/Libation.$CRAFT_PROJECT_VERSION-linux-chardonnay-$CRAFT_ARCH_TRIPLET_BUILD_FOR.deb
+      craftctl default
 
 apps:
   libation:
