@@ -1,4 +1,4 @@
-version: 11.3.6
+version: 11.3.7
 name: libation
 base: core22
 summary: Liberate your audio books
@@ -14,7 +14,7 @@ confinement: strict
 
 parts:
   libation:
-    source: https://github.com/rmcrackan/Libation/releases/download/v$SNAPCRAFT_PROJECT_VERSION/Libation.$SNAPCRAFT_PROJECT_VERSION-linux-chardonnay-$SNAPCRAFT_TARGET_ARCH.deb
+    source: https://github.com/rmcrackan/Libation/releases/download/v$CRAFT_PROJECT_VERSION/Libation.$CRAFT_PROJECT_VERSION-linux-chardonnay-$CRAFT_TARGET_ARCH.deb
     plugin: dump
 
 apps:
