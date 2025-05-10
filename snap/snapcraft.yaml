@@ -1,4 +1,4 @@
-version: "12.4.1"
+version: "12.4.2.2"
 name: libation
 base: core22
 summary: Liberate your audio books
