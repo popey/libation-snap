@@ -1,4 +1,4 @@
-version: '14.2.4'
+version: '14.2.5'
 name: libation
 base: core24
 summary: Liberate your audio books
